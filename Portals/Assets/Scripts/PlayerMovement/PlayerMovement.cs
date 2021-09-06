@@ -29,7 +29,7 @@ namespace FlyingCrow.PlayerMovement
         {
             if (Physics.CheckSphere(groundCheck.position, groundDist, groundLayer))
             {
-                velocity.y = -2;
+                velocity.y = -10f;
             }
 
             float xAxis = Input.GetAxis("Horizontal");
@@ -42,8 +42,6 @@ namespace FlyingCrow.PlayerMovement
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
-
-            Debug.Log(velocity);
         }
     }
 }
